@@ -25,29 +25,24 @@ const notas = [
         credito: 3,
     },
 ];
-
 const notasConCredito = notas.map(
     function (notaObjeto){
         return notaObjeto.nota * notaObjeto.credito;
     }
 );
-
 const sumaDeNotasConCredito = notasConCredito.reduce(
     function (suma = 0, nuevoValor){
         return suma + nuevoValor;
     }
 );
-
 const creditos = notas.map(
     function (notaObjeto){
         return notaObjeto.credito;
     }
 );
-
 const sumaDeCreditos = creditos.reduce(
     function (suma = 0, nuevoValor){
         return suma + nuevoValor;
     }
 );
-
 const promedioPonderado = sumaDeNotasConCredito / sumaDeCreditos;
